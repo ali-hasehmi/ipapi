@@ -11,7 +11,7 @@ import (
 func main() {
 	info, err := ipapi.QueryIPInfo("1.1.1.1")
 	if err != nil {
-		log.Fatalln(info)
+		log.Fatalln(err)
 	}
 	b, err := json.MarshalIndent(info, "", "\t")
 	if err != nil {

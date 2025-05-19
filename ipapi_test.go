@@ -66,3 +66,13 @@ func TestQueryIpInfo(t *testing.T) {
 		t.Fatal("fatal misinformation in returned IpInfo: IPv6 doesn't match")
 	}
 }
+
+func TestQueryOwnIPInfo(t *testing.T) {
+	info, err := QueryOwnIPInfo()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if info == nil {
+		t.Fatal("no error reported but nil IpInfo returned")
+	}
+}
