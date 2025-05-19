@@ -1,6 +1,6 @@
 # ipapi
 
-`ipapi` is a simple and lightweight Go package to fetch public IP address information (IPv4 and IPv6) of the current machine or any arbitrary IP address using third-party [APIs](###Acknoledgments)
+`ipapi` is a simple, dependency free and lightweight Go package to fetch public IP address information (IPv4 and IPv6) of the current machine or any arbitrary IP address using third-party [APIs](###Acknoledgments)
 
 ## Features
 
@@ -24,6 +24,7 @@ package main
 
 import (
     "github.com/ali-hasehmi/ipapi"
+    "log"
 )
 
 func main(){
@@ -78,7 +79,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 
 	"github.com/ali-hasehmi/ipapi"
@@ -93,7 +93,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(info)
 	}
-	fmt.Println(string(b))
+	log.Println(string(b))
 }
 ```
 
